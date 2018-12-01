@@ -11,8 +11,7 @@ def main():
 
     # solve day 1 puzzle
     current_freq = 0
-    for change in changes:
-        current_freq += change
+    current_freq = sum(changes)
     print(f"Resulting frequency: {current_freq}")
 
     # set up vars for day 2 puzzle
