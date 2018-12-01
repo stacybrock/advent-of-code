@@ -10,7 +10,6 @@ def main():
         changes = list(map(int, inputfile.readlines()))
 
     # solve day 1 puzzle
-    current_freq = 0
     current_freq = sum(changes)
     print(f"Resulting frequency: {current_freq}")
 
