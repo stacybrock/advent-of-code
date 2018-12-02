@@ -9,16 +9,16 @@ def main():
     with open('input.txt') as inputfile:
         changes = list(map(int, inputfile.readlines()))
 
-    # solve day 1 puzzle
+    # solve part one
     current_freq = sum(changes)
     print(f"Resulting frequency: {current_freq}")
 
-    # set up vars for day 2 puzzle
+    # set up vars for part two
     freqs_seen = []
     freqs_seen.append(0)
     current_freq = 0
 
-    # solve day 2 puzzle
+    # solve part two
     while True:
         for change in changes:
             current_freq += change
