@@ -5,7 +5,6 @@
 
 def main():
     # get list of freq changes from input
-    changes = []
     with open('input.txt') as inputfile:
         changes = list(map(int, inputfile.readlines()))
 
@@ -14,8 +13,7 @@ def main():
     print(f"Resulting frequency: {current_freq}")
 
     # set up vars for part two
-    freqs_seen = []
-    freqs_seen.append(0)
+    freqs_seen = set([0])
     current_freq = 0
 
     # solve part two
@@ -25,7 +23,7 @@ def main():
             if current_freq in freqs_seen:
                 print(f"Found duplicate frequency: {current_freq}")
                 return
-            freqs_seen.append(current_freq)
+            freqs_seen.add(current_freq)
 
 
 if __name__ == '__main__':
