@@ -1,11 +1,12 @@
 # solution to Advent of Code 2018, day 2 part one and two
 # https://adventofcode.com/2018/day/2
 #
-# assumes puzzle input is in a file called input.txt
+# Usage: inventory.py [inputfile]
+
+import fileinput
 
 def main():
-    with open('input.txt') as inputfile:
-        box_ids = list(line.strip() for line in inputfile.readlines())
+    box_ids = list(line.strip() for line in fileinput.input())
 
     # solve part one
     two_counts = three_counts = 0

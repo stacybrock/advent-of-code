@@ -1,14 +1,14 @@
 # solution to Advent of Code 2018, day 3 part one and two
 # https://adventofcode.com/2018/day/3
 #
-# assumes puzzle input is in a file called input.txt
+# Usage: fabric.py [inputfile]
 
+import fileinput
 import re
 from collections import defaultdict
 
 def main():
-    with open('input.txt') as inputfile:
-        claims = list(parse_claim(line) for line in inputfile.readlines())
+    claims = list(parse_claim(line) for line in fileinput.input())
 
     fabric = defaultdict(dict)
 

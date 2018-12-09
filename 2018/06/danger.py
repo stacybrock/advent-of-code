@@ -3,12 +3,12 @@
 #
 # assumes puzzle input is in a file called input.txt
 
+import fileinput
 from collections import defaultdict
 from operator import itemgetter
 
 def main():
-    with open('input.txt') as inputfile:
-        raw_coordinates = list(line.strip() for line in inputfile.readlines())
+    raw_coordinates = list(line.strip() for line in fileinput.input())
 
     # convert 'x, y' formatted coordinates into tuples of ints
     coords = [tuple(map(int,c.split(", "))) for c in raw_coordinates]

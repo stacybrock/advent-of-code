@@ -3,6 +3,7 @@
 #
 # assumes puzzle input is in a file called input.txt
 
+import fileinput
 from collections import deque
 
 class LicenseNode():
@@ -70,8 +71,7 @@ def extract(nums):
 
 
 def main():
-    with open('input.txt') as inputfile:
-        inputline = inputfile.readline().strip()
+    inputline = next(fileinput.input()).strip()
 
     # convert puzzle input to list of numbers
     nums = deque([int(n) for n in inputline.split(' ')])

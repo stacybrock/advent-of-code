@@ -1,14 +1,14 @@
 # solution to Advent of Code 2018, day 5 part one and two
 # https://adventofcode.com/2018/day/5
 #
-# assumes puzzle input is in a file called input.txt
+# Usage: catalyze.py [inputfile]
 
+import fileinput
 import string
 from operator import itemgetter
 
 def main():
-    with open('input.txt') as inputfile:
-        polymer = inputfile.readline().strip()
+    polymer = next(fileinput.input()).strip()
 
     # solve part one
     print(f"Units in polymer: {catalyze(polymer)}")

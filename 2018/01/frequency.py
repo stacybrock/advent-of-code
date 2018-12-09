@@ -1,12 +1,12 @@
 # solution to Advent of Code 2018, day 1 part one and two
 # https://adventofcode.com/2018/day/1
 #
-# assumes puzzle input is in a file called input.txt
+# Usage: frequency.py [inputfile]
+
+import fileinput
 
 def main():
-    # get list of freq changes from input
-    with open('input.txt') as inputfile:
-        changes = list(map(int, inputfile.readlines()))
+    changes = list(map(int, fileinput.input()))
 
     # solve part one
     current_freq = sum(changes)

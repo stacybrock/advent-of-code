@@ -1,15 +1,15 @@
 # solution to Advent of Code 2018, day 4 part one and two
 # https://adventofcode.com/2018/day/4
 #
-# assumes puzzle input is in a file called input.txt
+# Usage: guards.py [inputfile]
 
+import fileinput
 import re
 from collections import defaultdict
 from operator import itemgetter
 
 def main():
-    with open('input.txt') as inputfile:
-        observations = list(line.strip() for line in inputfile.readlines())
+    observations = list(line.strip() for line in fileinput.input())
 
     # a dict-of-dicts mapping guard ids to sleep amounts by minute
     # {id: {minute: 0}}
