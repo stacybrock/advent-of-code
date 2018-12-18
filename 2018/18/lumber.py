@@ -57,4 +57,4 @@ def main():
 
 if __name__ == '__main__':
     import timeit
-    print(timeit.timeit('main()', 'from __main__ import main',number=10))
+    print(timeit.timeit('main()', 'from __main__ import main', number=10))
